@@ -1,0 +1,25 @@
+[package]
+name = "common_reminders_worker"
+version = "0.1.0"
+edition = "2021"
+authors = ["Andres Velasco <velasco.andrs@gmail.com>"]
+
+[package.metadata.release]
+release = false
+
+# https://github.com/rustwasm/wasm-pack/issues/1247
+[package.metadata.wasm-pack.profile.release]
+wasm-opt = false
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+worker = { version = "0.2.0" }
+worker-macros = { version = "0.2.0" }
+console_error_panic_hook = { version = "0.1.1" }
+time = { version = "0.3.34", features = ["wasm-bindgen"] }
+tower-service = "0.3.2"
+serde = { version = "1.0.197", features = ["serde_derive"] }
+reqwest = { version = "0.12.5", default-features = false, features = ["json"] }
+serde_json = "1.0.114"

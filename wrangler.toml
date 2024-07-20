@@ -1,0 +1,9 @@
+name = "common_reminders_worker"
+main = "build/worker/shim.mjs"
+compatibility_date = "2024-07-20"
+
+[triggers]
+crons = ["0 17 * * 6", "0 3 * * *"]
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
