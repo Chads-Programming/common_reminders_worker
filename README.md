@@ -13,7 +13,7 @@ Este proyecto esta realizado con los workers de cloudflare por lo que necesitara
 ### Variables de Entorno
 Basarse en el archivo `.dev.vars.example` el cual tiene las siguientes variables de entorno:
 
-- `BOT_HOST`: Nombre el host del bot.
+- `BOT_HOST`: Nombre el host del bot (incluir http o htpps).
 - `BOT_API_KEY`: API key necesaria para acceder al endpoint del bot.
 
 ## Setup
