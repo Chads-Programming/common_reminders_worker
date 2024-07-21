@@ -2,8 +2,8 @@
     Define the endpoints the reminder cronjob resolve
 */
 pub const WALLET_REFILL_ENDPOINT: &str = "wallet/refill";
-pub const GREETING_GOOD_NIGHT_ENDPOINT: &str = "reminders/good-night";
-pub const GREETING_GOOD_MORNING_ENDPOINT: &str = "reminders/good-morning";
+pub const GREETING_GOOD_NIGHT_ENDPOINT: &str = "reminder/good-night";
+pub const GREETING_GOOD_MORNING_ENDPOINT: &str = "reminder/good-morning";
 /*
     Define events cronjobs here
 */
