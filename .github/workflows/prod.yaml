@@ -39,7 +39,7 @@ jobs:
       - name: Deploy
         uses: cloudflare/wrangler-action@v3
         env:
-          BOT_ENDPOINT: ${{ secrets.BOT_HOST }}
+          BOT_HOST: ${{ secrets.BOT_HOST }}
           BOT_API_KEY: ${{ secrets.BOT_API_KEY }}
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
