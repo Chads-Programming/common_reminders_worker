@@ -30,8 +30,11 @@ async fn main(event: ScheduledEvent, env: Env, _ctx: ScheduleContext) {
         consts::WALLET_REFILL_EVENT => {
             reminders::wallet_refill::run(&client, &bot_host, &bot_api_key).await
         }
-        consts::GREETIN_GOOD_NIGHT_EVENT => {
+        consts::GREETING_GOOD_NIGHT_EVENT => {
             reminders::good_night::run(&client, &bot_host, &bot_api_key).await
+        }
+        consts::GREETING_GOOD_MORNING_EVENT => {
+            reminders::good_morning::run(&client, &bot_host, &bot_api_key).await
         }
         _ => {
             console_error!("Missing event");
