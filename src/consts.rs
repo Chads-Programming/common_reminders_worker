@@ -4,6 +4,7 @@
 pub const WALLET_REFILL_ENDPOINT: &str = "wallet/refill";
 pub const GREETING_GOOD_NIGHT_ENDPOINT: &str = "reminder/good-night";
 pub const GREETING_GOOD_MORNING_ENDPOINT: &str = "reminder/good-morning";
+pub const ENGLISH_DAY_ENDPOINT: &str = "reminder/english-day";
 /*
     Define events cronjobs here
 */
@@ -13,3 +14,5 @@ pub const WALLET_REFILL_EVENT: &str = "0 17 * * 6";
 pub const GREETING_GOOD_NIGHT_EVENT: &str = "0 3 * * *";
 // Each day at 13pm UTC -> 8am in UTC-5
 pub const GREETING_GOOD_MORNING_EVENT: &str = "0 13 * * *";
+// Each day at 10pm UTC -> 6am in UTC-5
+pub const ENGLISH_DAY_EVENT: &str = "0 10 * * 5";
