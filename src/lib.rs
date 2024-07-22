@@ -36,6 +36,9 @@ async fn main(event: ScheduledEvent, env: Env, _ctx: ScheduleContext) {
         consts::GREETING_GOOD_MORNING_EVENT => {
             reminders::good_morning::run(&client, &bot_host, &bot_api_key).await
         }
+        consts::ENGLISH_DAY_EVENT => {
+            reminders::english_day::run(&client, &bot_host, &bot_api_key).await
+        }
         _ => {
             console_error!("Missing event");
         }
