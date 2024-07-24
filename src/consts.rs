@@ -1,11 +1,4 @@
 /*
-    Define the endpoints the reminder cronjob resolve
-*/
-pub const WALLET_REFILL_ENDPOINT: &str = "wallet/refill";
-pub const GREETING_GOOD_NIGHT_ENDPOINT: &str = "reminder/good-night";
-pub const GREETING_GOOD_MORNING_ENDPOINT: &str = "reminder/good-morning";
-pub const ENGLISH_DAY_ENDPOINT: &str = "reminder/english-day";
-/*
     Define events cronjobs here
 */
 // Each saturdays at 17pm UTC  -> 12pm in UTC-5
