@@ -64,7 +64,9 @@ async fn main(event: ScheduledEvent, env: Env, _ctx: ScheduleContext) {
         consts::WALLET_REFILL_EVENT => manager.dispatch(wallet_refill_wh.id()).await,
         consts::GREETING_GOOD_NIGHT_EVENT => manager.dispatch(good_night_wh.id()).await,
         consts::GREETING_GOOD_MORNING_EVENT => manager.dispatch(good_morning_wh.id()).await,
-        consts::ENGLISH_DAY_EVENT => manager.dispatch(english_day_wh.id()).await,
+        consts::ENGLISH_DAY_EVENT_WED | consts::ENGLISH_DAY_EVENT_FRI => {
+            manager.dispatch(english_day_wh.id()).await
+        }
         _ => {
             console_error!("Missing event");
         }
